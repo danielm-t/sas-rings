@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Implement Olympic Rings Use Html And CSS</title>
+<style>
+
+/* define the rings basic css style */
+.ring {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    border-style: solid;
+    border-width: 10px;
+}
+
+/* define the blue ring css style */
+.blue {
+    border-color: #0180C3;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* define the yellow ring basic css style */
+.yellow {
+    border-color: #FEB131;
+    left: 70px;
+    top: 60px;
+}
+
+/* define the first part of the yellow ring css style */
+.yellow1 {
+    /* above the blue ring */
+    z-index: 0;
+    /* clip circle */
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+/* define the second part of the yellow ring css style */
+.yellow2 {
+    /* under the blue ring */
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+}
+
+/* define the black ring basic css style */
+.black {
+    border-color: black;
+    left: 140px;
+    top: 0px;
+}
+
+/* define the first part of the black ring css style */
+.black1 {
+    z-index: -2;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+/* define the second part of the black ring css style */
+.black2 {
+    z-index: 0;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+/* define the green ring basic css style */
+.green {
+    border-color: #059341;
+    left: 210px;
+    top: 60px;
+}
+
+/* define the first part of the green ring css style */
+.green1 {
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+/* define the second part of the green ring css style */
+.green2 {
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+}
+
+/* define the red ring basic css style */
+.red {
+    border-color: #FF0000;
+    left: 280px;
+    top: 0px;
+}
+
+/* define the first part of the red ring css style */
+.red1 {
+    z-index: -2;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+/* define the second part of the red ring css style */
+.red2 {
+    z-index: 0;
+    clip-path: polygon(100% 100%, 100% 0, 0 100%);
+}
+
+.cyan{
+  border-color: #aaf3f3;
+  left: 140px;
+  top: 125px;
+}
+.cyan1 {
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.cyan2 {
+    z-index: 1;
+    clip-path: polygon(100% 100%, 100% 0, 0 100%);
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <!-- the blue ring div -->
+    <div class="ring blue"></div>
+    
+    <!-- the 2 yellow ring divs -->
+    <div class="ring yellow yellow1"></div>
+    <div class="ring yellow yellow2"></div>
+    
+    <!-- the 2 black ring divs -->
+    <div class="ring black black1"></div>
+    <div class="ring black black2"></div>
+    
+    <!-- the 2 green ring divs -->
+    <div class="ring green green1"></div>
+    <div class="ring green green2"></div>
+    
+    <!-- the 2 red ring divs aaf3f3-->
+    <div class="ring red red1"></div>
+    <div class="ring red red2"></div>
+    
+    <div class="ring cyan cyan1"></div>
+    <div class="ring cyan cyan2"></div>
+</div>
+
+</body>
+</html>
